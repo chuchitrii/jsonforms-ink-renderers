@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Text } from 'ink';
+import { Box, Text, useInput } from 'ink';
 import {
   ArrayLayoutProps,
   rankWith,
@@ -9,19 +9,6 @@ import {
 } from '@jsonforms/core';
 import { withJsonFormsArrayLayoutProps } from '@jsonforms/react';
 import { JsonFormsDispatch } from '@jsonforms/react';
-
-// Safe useInput hook that handles test environments
-function useSafeInput(handler: any, options?: any) {
-  try {
-    // Dynamically import useInput to avoid issues in test environments
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { useInput } = require('ink');
-    return useInput(handler, options);
-  } catch (error) {
-    // In test environments, input handling may not work
-    return null;
-  }
-}
 
 /**
  * Renderer for arrays of objects with add/delete/navigate controls.
@@ -41,7 +28,7 @@ const InkArrayControl: React.FC<ArrayLayoutProps> = ({
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  useSafeInput(
+  useInput(
     (input: string, key: any) => {
       if (!enabled) return;
 
