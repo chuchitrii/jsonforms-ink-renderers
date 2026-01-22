@@ -16,6 +16,7 @@ export default {
   transformIgnorePatterns: [
     'node_modules/(?!(ink-testing-library|ink|@jsonforms|yoga-wasm-web|chalk|ansi-styles|strip-ansi|ansi-regex)/)',
   ],
+  setupFilesAfterEnv: ['<rootDir>/src/__tests__/setup.ts'],
   testMatch: ['**/__tests__/**/*.test.ts', '**/__tests__/**/*.test.tsx'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
