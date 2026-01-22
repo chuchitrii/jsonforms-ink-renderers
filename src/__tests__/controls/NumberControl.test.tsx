@@ -26,11 +26,6 @@ describe('NumberControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if focus system error occurred
-    if (output.includes('stdin.ref is not a function')) {
-      console.warn('Skipping test due to ink focus system limitation in test environment');
-      return;
-    }
     expect(output).toContain('Age');
   });
 
@@ -57,11 +52,6 @@ describe('NumberControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if focus system error occurred
-    if (output.includes('stdin.ref is not a function')) {
-      console.warn('Skipping test due to ink focus system limitation in test environment');
-      return;
-    }
     expect(output).toContain('Price');
   });
 
@@ -89,11 +79,6 @@ describe('NumberControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if focus system error occurred
-    if (output.includes('stdin.ref is not a function')) {
-      console.warn('Skipping test due to ink focus system limitation in test environment');
-      return;
-    }
     expect(output).toContain('Percentage');
     expect(output).toContain('50');
   });

@@ -27,11 +27,6 @@ describe('EnumControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if focus system error occurred
-    if (output.includes('stdin.ref is not a function')) {
-      console.warn('Skipping test due to ink focus system limitation in test environment');
-      return;
-    }
     expect(output).toContain('Country');
   });
 
@@ -58,11 +53,6 @@ describe('EnumControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if focus system error occurred
-    if (output.includes('stdin.ref is not a function')) {
-      console.warn('Skipping test due to ink focus system limitation in test environment');
-      return;
-    }
     expect(output).toContain('Role');
     expect(output).toContain('admin');
     expect(output).toContain('user');
@@ -92,11 +82,6 @@ describe('EnumControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if focus system error occurred
-    if (output.includes('stdin.ref is not a function')) {
-      console.warn('Skipping test due to ink focus system limitation in test environment');
-      return;
-    }
     expect(output).toContain('Status');
     expect(output).toContain('active');
   });

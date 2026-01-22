@@ -33,11 +33,6 @@ describe('ArrayControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if rendering error occurred
-    if (output.includes('stdin.ref is not a function') || output.includes('must be rendered inside <Text>')) {
-      console.warn('Skipping test due to ink rendering limitation in test environment');
-      return;
-    }
     expect(output).toContain('Contacts');
   });
 
@@ -73,11 +68,6 @@ describe('ArrayControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if rendering error occurred
-    if (output.includes('stdin.ref is not a function') || output.includes('must be rendered inside <Text>')) {
-      console.warn('Skipping test due to ink rendering limitation in test environment');
-      return;
-    }
     expect(output).toContain('Items');
     expect(output).toMatch(/2.*items/i);
   });
@@ -107,11 +97,6 @@ describe('ArrayControl', () => {
 
     const output = lastFrame();
 
-    // Skip assertions if rendering error occurred
-    if (output.includes('stdin.ref is not a function') || output.includes('must be rendered inside <Text>')) {
-      console.warn('Skipping test due to ink rendering limitation in test environment');
-      return;
-    }
     expect(output).toContain('Tags');
     expect(output).toMatch(/No items|0.*items/i);
   });

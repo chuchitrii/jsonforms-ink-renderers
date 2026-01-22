@@ -100,11 +100,6 @@ describe('Integration Tests - Multiple Schemas', () => {
 
       const output = lastFrame();
 
-      // Skip assertions if focus system error occurred
-      if (output.includes('stdin.ref is not a function')) {
-        console.warn('Skipping test due to ink focus system limitation in test environment');
-        return;
-      }
 
       expect(output).toContain('Product Name');
       expect(output).toContain('Laptop');
@@ -152,11 +147,6 @@ describe('Integration Tests - Multiple Schemas', () => {
 
       const output = lastFrame();
 
-      // Skip assertions if focus system error occurred
-      if (output.includes('stdin.ref is not a function')) {
-        console.warn('Skipping test due to ink focus system limitation in test environment');
-        return;
-      }
 
       expect(output).toContain('First Name');
       expect(output).toContain('Last Name');
@@ -215,11 +205,6 @@ describe('Integration Tests - Multiple Schemas', () => {
 
       const output = lastFrame();
 
-      // Skip assertions if focus system error occurred
-      if (output.includes('stdin.ref is not a function')) {
-        console.warn('Skipping test due to ink focus system limitation in test environment');
-        return;
-      }
 
       expect(output).toContain('Profile');
       expect(output).toContain('Display Name');
@@ -258,11 +243,6 @@ describe('Integration Tests - Multiple Schemas', () => {
 
       const output = lastFrame();
 
-      // Skip assertions if focus system error occurred
-      if (output.includes('stdin.ref is not a function')) {
-        console.warn('Skipping test due to ink focus system limitation in test environment');
-        return;
-      }
 
       expect(output).toContain('Skills');
       expect(output).toContain('JavaScript');
@@ -321,11 +301,6 @@ describe('Integration Tests - Multiple Schemas', () => {
 
       const output = lastFrame();
 
-      // Skip assertions if focus system error occurred
-      if (output.includes('stdin.ref is not a function')) {
-        console.warn('Skipping test due to ink focus system limitation in test environment');
-        return;
-      }
 
       expect(output).toContain('Title');
       expect(output).toContain('Implement feature');
