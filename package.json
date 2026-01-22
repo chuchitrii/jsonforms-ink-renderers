@@ -1,0 +1,46 @@
+{
+  "name": "@jsonforms/ink-renderers",
+  "version": "1.0.0",
+  "description": "JSONForms renderers for terminal UIs using Ink",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "demo": "tsx examples/demo.tsx",
+    "test": "jest"
+  },
+  "keywords": [
+    "jsonforms",
+    "ink",
+    "terminal",
+    "cli",
+    "forms"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@jsonforms/core": "^3.3.0",
+    "@jsonforms/react": "^3.3.0",
+    "ink": "^4.4.1",
+    "ink-text-input": "^5.0.1",
+    "ink-select-input": "^5.0.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "ink-testing-library": "^3.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@jsonforms/core": "^3.0.0",
+    "@jsonforms/react": "^3.0.0",
+    "ink": "^4.0.0",
+    "react": "^18.0.0"
+  }
+}
